@@ -17,11 +17,20 @@ interface UiDialogFormParams {
   fields: FormlyFieldConfig[]
   model?: any
   title?: string
+  className?: string
 }
 
 @Injectable({ providedIn: 'root' })
 export class UiService {
-  private layoutSubject = new BehaviorSubject<UiLayout>(null)
+  private layoutSubject = new BehaviorSubject<UiLayout>({
+    brand: {
+      logo: 'assets/logo.svg',
+      name: 'kikstart',
+      product: 'ui',
+      separator: '|',
+      description: 'Set of ready to use declarative Angular UI components.',
+    },
+  })
 
   set layout(layout: UiLayout) {
     this.layoutSubject.next(layout)
@@ -39,8 +48,9 @@ export class UiService {
     private toast: ToastrService,
   ) {}
 
-  openForm({ model, title, handler, fields }: UiDialogFormParams) {
+  openForm({ className, model, title, handler, fields }: UiDialogFormParams) {
     this.modal.show(UiDialogFormComponent, {
+      class: className || 'modal-dialog-centered',
       initialState: {
         model: cloneDeep(model),
         fields: cloneDeep(fields),
