@@ -10,57 +10,38 @@ import { ToastrModule } from 'ngx-toastr'
 
 import { TruncatePipe } from './pipes/truncate.pipe'
 
-import { UiAuthComponent } from './components/ui-auth/ui-auth.component'
-import { UiDialogFormComponent } from './components/ui-dialog-form.component'
-import { UiDialogProgressComponent } from './components/ui-dialog-progress.component'
-import { UiDropdownComponent } from './components/ui-dropdown.component'
-import { UiHeaderComponent } from './components/ui-header.component'
-import { UiLayoutComponent } from './components/ui-layout.component'
-import { UiListComponent } from './components/ui-list.component'
-import { UiListItemComponent } from './components/ui-list-item.component'
-import { UiPageSidebarComponent } from './components/ui-page-sidebar.component'
-import { UiPageSidebarRouteComponent } from './components/ui-page-sidebar-route.component'
-import { UiRenderComponent } from './components/ui-render.component'
-import { UiSidebarComponent } from './components/ui-sidebar.component'
-import { UiSidebarItemComponent } from './components/ui-sidebar-item.component'
-import { UiTabsComponent } from './components/ui-tabs.component'
-import { UiUserComponent } from './components/ui-user.component'
-
+import { UiAuthModule } from './components/ui-auth/ui-auth.module'
 import { UiAvatarModule } from './components/ui-avatar/ui-avatar.module'
 import { UiBrandModule } from './components/ui-brand/ui-brand.module'
 import { UiButtonModule } from './components/ui-button/ui-button.module'
 import { UiCardModule } from './components/ui-card/ui-card.module'
+import { UiCartIconModule } from './components/ui-cart-icon/ui-cart-icon.module'
 import { UiCodeModule } from './components/ui-code/ui-code.module'
 import { UiCommentModule } from './components/ui-comment/ui-comment.module'
 import { UiContentModule } from './components/ui-content/ui-content.module'
 import { UiDataModule } from './components/ui-data/ui-data.module'
 import { UiDebugModule } from './components/ui-debug/ui-debug.module'
+import { UiDialogModule } from './components/ui-dialog/ui-dialog.module'
+import { UiDropdownModule } from './components/ui-dropdown/ui-dropdown.module'
 import { UiFooterModule } from './components/ui-footer/ui-footer.module'
 import { UiFormModule } from './components/ui-form/ui-form.module'
+import { UiHeaderModule } from './components/ui-header/ui-header.module'
 import { UiHeroModule } from './components/ui-hero/ui-hero.module'
 import { UiLabelModule } from './components/ui-label/ui-label.module'
+import { UiLayoutModule } from './components/ui-layout/ui-layout.module'
 import { UiLinkModule } from './components/ui-link/ui-link.module'
 import { UiLinksModule } from './components/ui-links/ui-links.module'
+import { UiListModule } from './components/ui-list/ui-list.module'
 import { UiLoadingModule } from './components/ui-loading/ui-loading.module'
 import { UiNoDataModule } from './components/ui-no-data/ui-no-data.module'
+import { UiPageSidebarModule } from './components/ui-page-sidebar/ui-page-sidebar.module'
+import { UiRenderModule } from './components/ui-render/ui-render.module'
+import { UiSidebarModule } from './components/ui-sidebar/ui-sidebar.module'
+import { UiTabsModule } from './components/ui-tabs/ui-tabs.module'
+import { UiUserModule } from './components/ui-user/ui-user.module'
+import { UiPriceModule } from './components/ui-price/ui-price.module'
 
-const COMPONENTS = [
-  UiAuthComponent,
-  UiDialogFormComponent,
-  UiDialogProgressComponent,
-  UiDropdownComponent,
-  UiHeaderComponent,
-  UiLayoutComponent,
-  UiListComponent,
-  UiListItemComponent,
-  UiPageSidebarComponent,
-  UiPageSidebarRouteComponent,
-  UiRenderComponent,
-  UiSidebarComponent,
-  UiSidebarItemComponent,
-  UiTabsComponent,
-  UiUserComponent,
-]
+const COMPONENTS = []
 
 const EXPORT_MODULES = [
   CommonModule,
@@ -68,26 +49,39 @@ const EXPORT_MODULES = [
   ModalModule,
   TabsModule,
   // Ui Modules will be exported until version 2
+  UiAuthModule,
   UiAvatarModule,
   UiBrandModule,
   UiButtonModule,
   UiCardModule,
+  UiCartIconModule,
   UiCodeModule,
   UiCommentModule,
   UiContentModule,
   UiDebugModule,
+  UiDialogModule,
+  UiDropdownModule,
   UiFooterModule,
   UiFormModule,
+  UiHeaderModule,
   UiHeroModule,
   UiLabelModule,
+  UiLayoutModule,
   UiLinkModule,
   UiLinksModule,
+  UiListModule,
   UiLoadingModule,
   UiNoDataModule,
+  UiPageSidebarModule,
+  UiPriceModule,
+  UiRenderModule,
+  UiSidebarModule,
+  UiTabsModule,
+  UiUserModule,
 ]
 
 @NgModule({
-  entryComponents: [UiDialogFormComponent, UiDialogProgressComponent],
+  entryComponents: [],
   declarations: [TruncatePipe, ...COMPONENTS],
   imports: [
     ...EXPORT_MODULES,
